@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Voting Platform</h1>
+        <div class="options">
+            <button onclick="showLoginPage('voter')">Voter</button>
+            <button onclick="showLoginPage('organization')">Organization</button>
+        </div>
+    </div>
+
+    <!-- Voter Login Form -->
+    <div id="voter-login" class="login-form hidden">
+        <h2>Voter Login</h2>
+        <input type="text" id="voter-username" placeholder="Username">
+        <input type="password" id="voter-password" placeholder="Password">
+        <button onclick="voterLogin()">Login</button>
+        <p class="link" onclick="showSignupPage('voter')">Create New Account</p>
+    </div>
+
+    <!-- Voter Signup Form -->
+    <div id="voter-signup" class="login-form hidden">
+        <h2>Create New Voter Account</h2>
+        <input type="text" id="signup-name" placeholder="Name">
+        <input type="text" id="signup-username" placeholder="Username">
+        <input type="password" id="signup-password" placeholder="Create Password">
+        <input type="text" id="signup-phone" placeholder="Phone Number">
+        <button onclick="voterSignup()">Sign Up</button>
+    </div>
+
+    <!-- Voter Home Page -->
+    <div id="voter-home" class="home hidden">
+        <h2>Welcome, <span id="user-name"></span>!</h2>
+        <input type="text" id="poll-id" placeholder="Enter Poll ID">
+        <button onclick="searchPoll()">Search</button>
+        <div id="poll-details" class="hidden">
+            <h3>Poll Details</h3>
+            <p id="poll-question">Question: </p>
+            <button onclick="castVote()">Vote</button>
+        </div>
+    </div>
+
+    <!-- Organization Login Form -->
+    <div id="organization-login" class="login-form hidden">
+        <h2>Organization Login</h2>
+        <input type="text" id="org-username" placeholder="Username">
+        <input type="password" id="org-password" placeholder="Password">
+        <button onclick="organizationLogin()">Login</button>
+        <p class="link" onclick="showSignupPage('organization')">Create New Account</p>
+    </div>
+
+    <!-- Organization Signup Form -->
+    <div id="organization-signup" class="login-form hidden">
+        <h2>Create New Organization Account</h2>
+        <input type="text" id="org-name" placeholder="Organization Name">
+        <input type="text" id="org-username" placeholder="Username">
+        <input type="password" id="org-password" placeholder="Create Password">
+        <input type="text" id="org-phone" placeholder="Phone Number">
+        <button onclick="organizationSignup()">Sign Up</button>
+    </div>
+
+    <!-- Organization Home Page -->
+    <div id="org-home" class="home hidden">
+        <h2>Welcome, <span id="org-name-display"></span>!</h2>
+        <button onclick="showCreatePollPage()">Create Poll</button>
+        <div id="poll-list"></div>
+    </div>
+
+    <!-- Create Poll Page -->
+    <div id="create-poll" class="hidden">
+        <h2>Create New Poll</h2>
+        <input type="text" id="poll-name" placeholder="Poll Name">
+        <div id="question-list"></div>
+        <button onclick="addQuestion()">Add Question</button>
+        <button onclick="submitPoll()">Submit Poll</button>
+    </div>
+
+
+
+    <!-- Voter Home Page -->
+<div id="voter-home" class="home hidden">
+    <h2>Welcome, <span id="user-name"></span>!</h2>
+    <input type="text" id="poll-id" placeholder="Enter Poll ID">
+    <button onclick="searchPoll()">Search</button>
+    <div id="poll-details" class="hidden">
+        <h3>Poll Details</h3>
+        <p id="poll-question">Question: </p>
+        <button onclick="castVote()">Vote</button>
+    </div>
+    <button onclick="signOut()">Sign Out</button> <!-- Add Sign Out button -->
+</div>
+
+<!-- Organization Home Page -->
+<div id="org-home" class="home hidden">
+    <h2>Welcome, <span id="org-name-display"></span>!</h2>
+    <button onclick="showCreatePollPage()">Create Poll</button>
+    <div id="poll-list"></div>
+    <button onclick="signOut()">Sign Out</button> <!-- Add Sign Out button -->
+</div>
+
+<!-- Sign Out Button -->
+<button id="signout-btn" onclick="signOut()">Sign Out</button>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

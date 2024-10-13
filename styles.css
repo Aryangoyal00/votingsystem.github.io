@@ -1,0 +1,156 @@
+/* Body Styling */
+body {
+    font-family : 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('wp2589483.webp') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 20px;
+    animation: slideFadeIn 2s ease-in-out;
+}
+
+/* Animation for page transition */
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Container Styling */
+.container, .login-form, .signup-form {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    
+    
+}
+
+/* Form Input Styling */
+input {
+    display: block;
+    width: 70%;
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #000000;
+}
+
+/* Button Styling */
+button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Options Button Styling */
+.options button {
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 20px 30px;
+}
+
+/* Link Styling */
+.link {
+    color: #000;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* Hidden Class for Page Visibility */
+.hidden {
+    display: none;
+}
+
+/* Question List Styling */
+#question-list input {
+    margin-bottom: 10px;
+}
+
+
+/* Sign Out Button Styling */
+#signout-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgb(0, 0, 0); /* You can change this to your preferred color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+/* Button Hover Effect */
+#signout-btn:hover {
+    opacity: 0.8;
+}
+
+
+/* Poll Styles */
+#org-home, #voter-home {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#org-home h2, #voter-home h2 {
+    margin-bottom: 20px;
+}
+
+#poll-list, #question-list, #poll-details {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#poll-list div, #question-list div, #poll-details div {
+    background-color: #e9e9e9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+#poll-name, #poll-id {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+}
+
+#poll-list button, #question-list button, #poll-details button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
